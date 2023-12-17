@@ -30,7 +30,7 @@
     "originalBottomRow": 32,
     "mobileBottomRow": 12,
     "widgetName": "inp_transaction",
-    "dynamicPropertyPathList": [{"key": "onTextChanged"}],
+    "dynamicPropertyPathList": [],
     "displayName": "Input",
     "searchTags": [
         "form",
