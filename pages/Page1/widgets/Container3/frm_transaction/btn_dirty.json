@@ -10,8 +10,8 @@
         "click",
         "submit"
     ],
-    "topRow": 33,
-    "bottomRow": 37,
+    "topRow": 34,
+    "bottomRow": 38,
     "parentRowSpace": 10,
     "type": "ICON_BUTTON_WIDGET",
     "hideCard": false,
@@ -19,7 +19,7 @@
     "animateLoading": true,
     "parentColumnSpace": 5.01025390625,
     "dynamicTriggerPathList": [],
-    "leftColumn": 3,
+    "leftColumn": 28,
     "dynamicBindingPathList": [
         {"key": "buttonColor"},
         {"key": "borderRadius"}
@@ -27,7 +27,7 @@
     "isDisabled": false,
     "key": "0t44twr2ps",
     "isDeprecated": false,
-    "rightColumn": 7,
+    "rightColumn": 32,
     "iconName": "walk",
     "widgetId": "by54pklq3t",
     "minWidth": 50,
@@ -39,9 +39,9 @@
     "isLoading": false,
     "mobileTopRow": 33,
     "responsiveBehavior": "hug",
-    "originalTopRow": 33,
+    "originalTopRow": 34,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 0,
-    "originalBottomRow": 37,
+    "originalBottomRow": 38,
     "buttonVariant": "TERTIARY"
 }

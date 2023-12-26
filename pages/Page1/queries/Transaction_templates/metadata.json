@@ -32,7 +32,7 @@
           "data": "TransactionTemplates"
         },
         "command": {
-          "data": "AGGREGATE"
+          "data": "FIND"
         },
         "count": {
           "query": {
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"aggregate\": \"TransactionTemplates\",\n  \"pipeline\": [{$unwind: \"$templates\"}],\n  \"cursor\": {}\n}\n",
+            "data": "{\n  \"find\": \"TransactionTemplates\",\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },

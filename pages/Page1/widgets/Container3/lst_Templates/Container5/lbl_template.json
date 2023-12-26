@@ -1,7 +1,7 @@
 {
     "boxShadow": "none",
     "mobileBottomRow": 4,
-    "widgetName": "Text9",
+    "widgetName": "lbl_template",
     "displayName": "Text",
     "iconSVG": "/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
     "searchTags": [
@@ -29,7 +29,7 @@
     "shouldTruncate": false,
     "borderWidth": "",
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{currentItem.templates.name}}",
+    "text": "{{currentItem.template}}",
     "key": "4bqeeogqb5",
     "isDeprecated": false,
     "rightColumn": 64,

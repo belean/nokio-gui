@@ -14,6 +14,7 @@
     ],
     "labelStyle": "",
     "inputType": "MULTI_LINE_TEXT",
+    "placeholderText": "",
     "isDisabled": false,
     "isRequired": false,
     "dynamicHeight": "AUTO_HEIGHT_WITH_LIMITS",
@@ -27,7 +28,7 @@
     ],
     "isLoading": false,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 32,
+    "originalBottomRow": 33,
     "mobileBottomRow": 12,
     "widgetName": "inp_transaction",
     "dynamicPropertyPathList": [],
@@ -38,7 +39,7 @@
         "number",
         "textarea"
     ],
-    "bottomRow": 32,
+    "bottomRow": 33,
     "parentRowSpace": 10,
     "autoFocus": false,
     "hideCard": false,
@@ -62,9 +63,9 @@
     "responsiveBehavior": "fill",
     "originalTopRow": 4,
     "mobileLeftColumn": 2,
-    "maxDynamicHeight": 28,
+    "maxDynamicHeight": 29,
     "shouldAllowAutofill": false,
     "iconAlign": "left",
-    "defaultText": "{{lst_Transactions.selectedItem}}",
+    "defaultText": "{{lst_Transactions.selectedItem}} ",
     "minDynamicHeight": 6
 }
