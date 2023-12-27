@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 590,
+          "bottomRow": 1292,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -49,17 +49,6 @@
           ],
           [
             {
-              "id": "Page1_JSObject1.push_template",
-              "name": "JSObject1.push_template",
-              "collectionId": "Page1_JSObject1",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "(is_dirty, current_item) => {\n  if (is_dirty == true) return showModal(\"mdl_no_change\"); else var item = current_item === undefined ? \"\" : current_item;\n  showAlert(\"Applied current_item!\", \"info\");\n  return inp_transaction.setValue(JSON.stringify(item, null, 2));\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Page1_getTransactionSum.get_transaction_sum",
               "name": "getTransactionSum.get_transaction_sum",
               "collectionId": "Page1_getTransactionSum",
@@ -67,7 +56,18 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "submitted_item => {\n  let sum = 0;\n  Object.entries(getTransactionSum.test).forEach(([k, v]) => console.log(k, \"&\", v), sum += getTransactionSum.mapper(k) * v);\n  return sum;\n}"
+                "submitted_item => {\n  let sum = 0;\n  console.log(\"submitted_item: \", submitted_item);\n  Object.entries(submitted_item).forEach(([k, v]) => {\n    sum += getTransactionSum.mapper(k.trim()) * v;\n  });\n  return sum.toFixed(2);\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_setInputField.push_template",
+              "name": "setInputField.push_template",
+              "collectionId": "Page1_setInputField",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "current_item => {\n  var item = current_item === undefined ? \"Select transaction or template\" : current_item;\n  showAlert(\"Applied current_item!\", \"info\");\n  return inp_transaction.setValue(JSON.stringify(item, null, 2));\n}"
               ],
               "timeoutInMillisecond": 10000
             }

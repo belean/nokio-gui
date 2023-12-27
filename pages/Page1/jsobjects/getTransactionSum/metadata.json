@@ -6,16 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "variables": [
-      {
-        "name": "test",
-        "value": "{\n  \"1930D\": 11,\n  \"1630K\": 11\n}"
-      },
-      {
-        "name": "account",
-        "value": "\"2930K\""
-      }
-    ],
+    "variables": [],
     "userPermissions": []
   },
   "id": "Page1_getTransactionSum",

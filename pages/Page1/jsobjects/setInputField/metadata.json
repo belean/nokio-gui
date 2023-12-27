@@ -1,6 +1,6 @@
 {
   "unpublishedCollection": {
-    "name": "JSObject1",
+    "name": "setInputField",
     "pageId": "Page1",
     "pluginId": "js-plugin",
     "pluginType": "JS",
@@ -9,7 +9,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "Page1_JSObject1",
+  "id": "Page1_setInputField",
   "deleted": false,
   "gitSyncId": "657ded5a5f0fbc462ca852ab_657f0b615f0fbc462ca852d6"
 }

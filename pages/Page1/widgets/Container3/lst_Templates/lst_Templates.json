@@ -106,7 +106,7 @@
     "rightColumn": 64,
     "widgetId": "mkeqznqttr",
     "minWidth": 450,
-    "onItemClick": "{{storeValue('current_item', currentItem, false);\nJSObject1.push_template(appsmith.store.is_trans_dirty, appsmith.store.current_item)\n}}",
+    "onItemClick": "{{setInputField.is_input_dirty(appsmith.store.is_trans_dirty) &&\nstoreValue('current_item', currentItem, false) &&\nsetInputField.push_template(appsmith.store.current_item)\n}}",
     "parentId": "mu9ug15eb6",
     "renderMode": "CANVAS",
     "mobileTopRow": 0,

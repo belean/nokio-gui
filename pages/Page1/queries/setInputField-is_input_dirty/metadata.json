@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "push_template",
-    "fullyQualifiedName": "JSObject1.push_template",
+    "name": "is_input_dirty",
+    "fullyQualifiedName": "setInputField.is_input_dirty",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_JSObject1",
+    "collectionId": "Page1_setInputField",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -23,13 +23,10 @@
       "jsArguments": [
         {
           "name": "is_dirty"
-        },
-        {
-          "name": "current_item"
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -42,9 +39,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-17T14:53:33Z"
+    "createdAt": "2023-12-27T16:18:48Z"
   },
-  "id": "Page1_JSObject1.push_template",
+  "id": "Page1_setInputField.is_input_dirty",
   "deleted": false,
-  "gitSyncId": "657ded5a5f0fbc462ca852ab_657f0b6d5f0fbc462ca852d8"
+  "gitSyncId": "657ded5a5f0fbc462ca852ab_658c4e6805122347e65cc47b"
 }
