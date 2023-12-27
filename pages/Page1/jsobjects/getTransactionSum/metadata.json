@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "getTransactionSum",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "test",
+        "value": "{\n  \"1930D\": 11,\n  \"1630K\": 11\n}"
+      },
+      {
+        "name": "account",
+        "value": "\"2930K\""
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Page1_getTransactionSum",
+  "deleted": false,
+  "gitSyncId": "657ded5a5f0fbc462ca852ab_658c1fb31af18c24d9750b10"
+}

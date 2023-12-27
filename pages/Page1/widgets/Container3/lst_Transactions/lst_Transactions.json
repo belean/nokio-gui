@@ -107,7 +107,7 @@
     "rightColumn": 19,
     "widgetId": "ifs267lowt",
     "minWidth": 450,
-    "onItemClick": "{{JSObject1.push_template(appsmith.store.is_trans_dirty)}}",
+    "onItemClick": "{{storeValue('current_item', currentItem, false);\nJSObject1.push_template(appsmith.store.is_trans_dirty, appsmith.store.current_item)}}",
     "parentId": "mu9ug15eb6",
     "renderMode": "CANVAS",
     "mobileTopRow": 0,

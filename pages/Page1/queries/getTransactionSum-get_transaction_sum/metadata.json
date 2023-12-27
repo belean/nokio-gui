@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "push_template",
-    "fullyQualifiedName": "JSObject1.push_template",
+    "name": "get_transaction_sum",
+    "fullyQualifiedName": "getTransactionSum.get_transaction_sum",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_JSObject1",
+    "collectionId": "Page1_getTransactionSum",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -22,14 +22,12 @@
       "selfReferencingDataPaths": [],
       "jsArguments": [
         {
-          "name": "is_dirty"
-        },
-        {
-          "name": "current_item"
+          "name": "submitted_item"
         }
       ]
     },
     "executeOnLoad": true,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -42,9 +40,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-17T14:53:33Z"
+    "createdAt": "2023-12-27T12:59:31Z"
   },
-  "id": "Page1_JSObject1.push_template",
+  "id": "Page1_getTransactionSum.get_transaction_sum",
   "deleted": false,
-  "gitSyncId": "657ded5a5f0fbc462ca852ab_657f0b6d5f0fbc462ca852d8"
+  "gitSyncId": "657ded5a5f0fbc462ca852ab_658c1fb31af18c24d9750b0d"
 }
