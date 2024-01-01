@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1292,
+          "bottomRow": 1450,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -29,25 +29,42 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Page1_Template",
+              "name": "Template",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_Transaction_ids_desc",
               "name": "Transaction_ids_desc",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
-              "id": "Page1_Transaction_templates",
-              "name": "Transaction_templates",
+              "id": "Page1_transaction",
+              "name": "transaction",
               "confirmBeforeExecute": false,
-              "pluginType": "DB",
+              "pluginType": "API",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ],
           [
+            {
+              "id": "Page1_Validate.get_validation",
+              "name": "Validate.get_validation",
+              "collectionId": "Page1_Validate",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "submitted_item => {\n  try {\n    let submitted_obj = JSON.parse(submitted_item);\n    let is_validated = true;\n    if (Object.keys(submitted_obj || ({})).length === 0) {\n      return false;\n    }\n    const re = /^\\d{4}[kKdD]$/;\n    Object.entries(submitted_obj).forEach(([k, v]) => {\n      if (!(re.test(k.trim()) && typeof v == 'number' && !isNaN(v))) {\n        is_validated = false;\n      }\n    });\n    return is_validated;\n  } catch (error) {\n    return false;\n  }\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Page1_getTransactionSum.get_transaction_sum",
               "name": "getTransactionSum.get_transaction_sum",
@@ -56,7 +73,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "submitted_item => {\n  let sum = 0;\n  console.log(\"submitted_item: \", submitted_item);\n  Object.entries(submitted_item).forEach(([k, v]) => {\n    sum += getTransactionSum.mapper(k.trim()) * v;\n  });\n  return sum.toFixed(2);\n}"
+                "submitted_item => {\n  try {\n    let sum = 0;\n    let submitted_obj = JSON.parse(submitted_item);\n    console.log(\"submitted_item: \", submitted_item);\n    Object.entries(submitted_obj || ({})).forEach(([k, v]) => {\n      sum += getTransactionSum.mapper(k.trim()) * v;\n    });\n    return sum.toFixed(2);\n  } catch (error) {\n    console.log(\"Error in get_transaction_sum\", error);\n    return false;\n  }\n}"
               ],
               "timeoutInMillisecond": 10000
             },

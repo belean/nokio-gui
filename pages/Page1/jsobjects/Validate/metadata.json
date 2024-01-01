@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Validate",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Page1_Validate",
+  "deleted": false,
+  "gitSyncId": "657ded5a5f0fbc462ca852ab_658c248f1af18c24d9750b17"
+}
