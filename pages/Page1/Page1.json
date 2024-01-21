@@ -73,7 +73,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "submitted_item => {\n  try {\n    let sum = 0;\n    let submitted_obj = JSON.parse(submitted_item);\n    console.log(\"submitted_item: \", submitted_item);\n    Object.entries(submitted_obj || ({})).forEach(([k, v]) => {\n      sum += getTransactionSum.mapper(k.trim()) * v;\n    });\n    return sum.toFixed(2);\n  } catch (error) {\n    console.log(\"Error in get_transaction_sum\", error);\n    return false;\n  }\n}"
+                "submitted_item => {\n  try {\n    let sum_credit = 0;\n    let sum_debit = 0;\n    let submitted_obj = JSON.parse(submitted_item);\n    Object.entries(submitted_obj || ({})).forEach(([k, v]) => {\n      if (k.trim().slice(-1) == 'K') sum_credit += v; else sum_debit += v;\n    });\n    return (sum_debit - sum_credit).toFixed(2);\n  } catch (error) {\n    console.log(\"Error in get_transaction_sum\", error);\n    return false;\n  }\n}"
               ],
               "timeoutInMillisecond": 10000
             },
