@@ -25,7 +25,7 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "Transaction",
+    "text": "Transaction in Bulk",
     "key": "4bqeeogqb5",
     "isDeprecated": false,
     "rightColumn": 64,

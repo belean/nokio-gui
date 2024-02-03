@@ -32,7 +32,7 @@
     ],
     "isLoading": false,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 12,
+    "originalBottomRow": 33,
     "mobileBottomRow": 12,
     "widgetName": "inp_transaction",
     "dynamicPropertyPathList": [
@@ -46,7 +46,7 @@
         "number",
         "textarea"
     ],
-    "bottomRow": 26,
+    "bottomRow": 33,
     "parentRowSpace": 10,
     "autoFocus": false,
     "hideCard": false,

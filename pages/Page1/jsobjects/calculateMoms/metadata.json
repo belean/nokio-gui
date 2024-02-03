@@ -1,0 +1,28 @@
+{
+  "unpublishedCollection": {
+    "name": "calculateMoms",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "in_var",
+        "value": "[\"2610\", \"2620\", \"2630\"]"
+      },
+      {
+        "name": "out_var",
+        "value": "[\"2640\"]"
+      },
+      {
+        "name": "trans_data",
+        "value": "[{\n  \"1930D\": 6333,\n  \"3000K\": 5333,\n  \"2640K\": 1000\n}, {\n  \"1930D\": 333,\n  \"3000K\": 283,\n  \"2610K\": 50\n}, {\n  \"1930K\": 84.62,\n  \"8265D\": 64.62,\n  \"2640D\": 20\n}, {\n  \"2620K\": 10\n}, {\n  \"2630D\": 5\n}]"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Page1_calculateMoms",
+  "deleted": false,
+  "gitSyncId": "657ded5a5f0fbc462ca852ab_65be328ab4c6641f05cde370"
+}

@@ -2,7 +2,7 @@
     "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
     "borderColor": "#E0DEDE",
     "iconSVG": "/static/media/icon.46adf7030d667f0ad9002aa31f997573.svg",
-    "topRow": 5,
+    "topRow": 1,
     "type": "JSON_FORM_WIDGET",
     "animateLoading": true,
     "leftColumn": 19,
@@ -54,7 +54,11 @@
         {"key": "schema.__root_schema__.children.customField1.defaultValue"},
         {"key": "schema.__root_schema__.children.customField1.validation"},
         {"key": "schema.__root_schema__.children.t_verification.borderRadius"},
-        {"key": "sourceData"}
+        {"key": "sourceData"},
+        {"key": "schema.__root_schema__.children.customField2.accentColor"},
+        {"key": "schema.__root_schema__.children.customField2.borderRadius"},
+        {"key": "schema.__root_schema__.children.customField3.accentColor"},
+        {"key": "schema.__root_schema__.children.customField3.defaultValue"}
     ],
     "showReset": true,
     "flexVerticalAlignment": "start",
@@ -153,7 +157,7 @@
     },
     "disabledWhenInvalid": true,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 82,
+    "originalBottomRow": 90,
     "useSourceData": false,
     "schema": {"__root_schema__": {
         "labelTextSize": "0.875rem",
@@ -310,6 +314,26 @@
                 "fieldType": "Text Input",
                 "validation": "{{((sourceData, formData, fieldState) => (getTransactionSum.get_transaction_sum(formData.t_data) == 0))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}"
             },
+            "customField2": {
+                "labelTextSize": "0.875rem",
+                "identifier": "customField2",
+                "isRequired": false,
+                "isCustomField": true,
+                "defaultValue": true,
+                "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                "dataType": "boolean",
+                "accessor": "savTemplate",
+                "isVisible": true,
+                "label": "Save as template",
+                "alignWidget": "LEFT",
+                "originalIdentifier": "customField2",
+                "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                "children": {},
+                "position": 11,
+                "isDisabled": false,
+                "sourceData": true,
+                "fieldType": "Checkbox"
+            },
             "t_name": {
                 "labelTextSize": "0.875rem",
                 "identifier": "t_name",
@@ -353,6 +377,26 @@
                 "isDisabled": false,
                 "sourceData": "556997-9445",
                 "fieldType": "Text Input"
+            },
+            "customField3": {
+                "labelTextSize": "0.875rem",
+                "identifier": "customField3",
+                "boxShadow": "none",
+                "isRequired": false,
+                "isCustomField": true,
+                "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.t_locked))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                "dataType": "boolean",
+                "accessor": "t_locked",
+                "isVisible": true,
+                "label": "Reconsiliated",
+                "alignWidget": "LEFT",
+                "originalIdentifier": "customField3",
+                "children": {},
+                "position": 12,
+                "isDisabled": true,
+                "sourceData": true,
+                "fieldType": "Switch"
             },
             "_id": {
                 "labelTextSize": "0.875rem",
@@ -525,10 +569,11 @@
     },
     "dynamicPropertyPathList": [
         {"key": "sourceData"},
-        {"key": "schema.__root_schema__.children.t_date.defaultValue"}
+        {"key": "schema.__root_schema__.children.t_date.defaultValue"},
+        {"key": "schema.__root_schema__.children.customField3.defaultValue"}
     ],
     "displayName": "JSON Form",
-    "bottomRow": 82,
+    "bottomRow": 86,
     "fieldLimitExceeded": false,
     "parentRowSpace": 10,
     "title": "Transaction",
@@ -542,7 +587,7 @@
     "key": "yoldcshjz2",
     "backgroundColor": "#fff",
     "isDeprecated": false,
-    "rightColumn": 41,
+    "rightColumn": 40,
     "widgetId": "gkfg47ln59",
     "minWidth": 450,
     "parentId": "mu9ug15eb6",

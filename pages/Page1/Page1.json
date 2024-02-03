@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1410,
+          "bottomRow": 1570,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -45,16 +45,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_transaction",
-              "name": "transaction",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Page1_Validate.get_validation",
               "name": "Validate.get_validation",
               "collectionId": "Page1_Validate",
@@ -77,6 +67,16 @@
               ],
               "timeoutInMillisecond": 10000
             },
+            {
+              "id": "Page1_transaction",
+              "name": "transaction",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
             {
               "id": "Page1_setInputField.push_template",
               "name": "setInputField.push_template",
