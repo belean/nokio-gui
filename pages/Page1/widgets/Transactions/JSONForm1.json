@@ -2,7 +2,7 @@
     "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
     "borderColor": "#E0DEDE",
     "iconSVG": "/static/media/icon.46adf7030d667f0ad9002aa31f997573.svg",
-    "topRow": 1,
+    "topRow": 4,
     "type": "JSON_FORM_WIDGET",
     "animateLoading": true,
     "leftColumn": 19,
@@ -157,7 +157,7 @@
     },
     "disabledWhenInvalid": true,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 90,
+    "originalBottomRow": 86,
     "useSourceData": false,
     "schema": {"__root_schema__": {
         "labelTextSize": "0.875rem",
@@ -573,7 +573,7 @@
         {"key": "schema.__root_schema__.children.customField3.defaultValue"}
     ],
     "displayName": "JSON Form",
-    "bottomRow": 86,
+    "bottomRow": 89,
     "fieldLimitExceeded": false,
     "parentRowSpace": 10,
     "title": "Transaction",
@@ -596,7 +596,7 @@
     "scrollContents": true,
     "responsiveBehavior": "fill",
     "fixedFooter": true,
-    "originalTopRow": 5,
+    "originalTopRow": 1,
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
     "minDynamicHeight": 4

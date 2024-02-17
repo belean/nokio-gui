@@ -1,26 +1,24 @@
 export default {
-	in_var: ["2610", "2620", "2630"],
-	out_var: ["2640"],
+	in_var: ["261", "262", "263"],
+	out_var: ["264"],
 	trans_data: [
 		{
-			"1930D": 6333,
-			"3000K": 5333,
-			"2640K": 1000
+			"1930D": 10,
+			"2610K": 10
 		},
 		{
-			"1930D": 333,
-			"3000K": 283,
-			"2610K": 50
+			"1930D": 1000,
+			"3000K": 800,
+			"2610K": 200
 		},
 		{
-			"1930K": 84.62,
-			"8265D": 64.62,
+			"1930K": 100,
+			"8265D": 80,
 			"2640D": 20
 		},
-		{"2620K": 10},
-		{"2630D": 5
-		},
-
+		{	"1930K": 300,
+		 "8265D": 240,
+		 "2640D": 60}
 	],
 
 	myFun1 (in_var, out_var, trans_data) {
@@ -41,7 +39,7 @@ export default {
 					([k, v]) => {
 						//console.log("types: ", typeof k, typeof v)
 						//if(["1K", "2D", "3D", "4K", "5K", "6K", "7K","8K", "9K"].indexOf(account.slice(0,1) + account.slice(-1))>=0)
-						if(["261", "262", "263"].indexOf(k.trim().slice(0,3))>=0){
+						if(this.in_var.indexOf(k.trim().slice(0,3))>=0){
 							console.log("Found IN-coming value ", k, v);
 							if(k.trim().slice(-1) == 'K')
 								sum_in_credit += v;
@@ -49,7 +47,7 @@ export default {
 								sum_in_debit += v;
 							else
 								throw new Error("Unable to calculate Moms!, ", item)			
-						} else if(["264"].indexOf(k.trim().slice(0,3))>=0) {
+						} else if(this.out_var.indexOf(k.trim().slice(0,3))>=0) {
 							console.log("Found OUT-coming value", k, v);
 							if(k.trim().slice(-1) == 'K')
 								sum_out_credit += v;
@@ -66,7 +64,7 @@ export default {
 			});
 			//console.log("credit=", credit, "debit", debit)
 			//return (sum_debit - sum_credit).toFixed(2);
-			return ((sum_in_credit - sum_in_debit) -  (sum_out_credit -sum_out_debit) ).toFixed(2);
+			return ((sum_out_credit - sum_out_debit) + (sum_in_credit - sum_in_debit) ).toFixed(2);
 		} catch (error) {
 			console.log("Error in get_transaction_sum", error)
 			return false
