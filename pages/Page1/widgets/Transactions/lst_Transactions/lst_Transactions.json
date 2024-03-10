@@ -88,7 +88,7 @@
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
     "widgetName": "lst_Transactions",
-    "listData": "{{transaction.data}}",
+    "listData": "{{transactions.data}}",
     "dynamicPropertyPathList": [{"key": "onItemClick"}],
     "displayName": "List",
     "bottomRow": 83,

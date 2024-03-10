@@ -9,7 +9,7 @@
         "label"
     ],
     "topRow": 0,
-    "bottomRow": 8,
+    "bottomRow": 10,
     "parentRowSpace": 10,
     "type": "TEXT_WIDGET",
     "hideCard": false,
@@ -28,7 +28,7 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "User: {{appsmith.user.email}}\nCompany: be Lean Solutions AB\nOrgnr: 556997-9445\nMoms: 165569979445",
+    "text": "User logged in: {{appsmith.user.email}}\nNamn: {{appsmith.user.name}}\nCompany: be Lean Solutions AB\nOrgnr: {{appsmith.store.orgnr}}\nMoms: 16{{appsmith.store.orgnr.replace('-','')}}",
     "key": "9c6sekijn9",
     "isDeprecated": false,
     "rightColumn": 64,
@@ -54,7 +54,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 8,
+    "originalBottomRow": 10,
     "fontSize": "0.875rem",
     "minDynamicHeight": 4
 }

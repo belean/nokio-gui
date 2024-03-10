@@ -2,6 +2,7 @@
   "unpublishedPage": {
     "name": "Page1",
     "slug": "page1",
+    "customSlug": "",
     "layouts": [
       {
         "viewMode": false,
@@ -13,7 +14,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1480,
+          "bottomRow": 1580,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -28,14 +29,6 @@
         },
         "layoutOnLoadActions": [
           [
-            {
-              "id": "Page1_Template",
-              "name": "Template",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Page1_Transaction_ids_desc",
               "name": "Transaction_ids_desc",
@@ -68,16 +61,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_transaction",
-              "name": "transaction",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Page1_setInputField.push_template",
               "name": "setInputField.push_template",
               "collectionId": "Page1_setInputField",
@@ -85,6 +68,28 @@
               "pluginType": "JS",
               "jsonPathKeys": [
                 "current_item => {\n  var item = current_item === undefined ? \"Select transaction or template\" : current_item;\n  showAlert(\"Applied current_item!\", \"info\");\n  return inp_transaction.setValue(JSON.stringify(item, null, 2));\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_user",
+              "name": "user",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.user.email"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_transactions",
+              "name": "transactions",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.orgnr"
               ],
               "timeoutInMillisecond": 10000
             }
